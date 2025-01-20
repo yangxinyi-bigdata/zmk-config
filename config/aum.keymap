@@ -423,13 +423,13 @@
                 DEF_layer {
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬───────────╮               ╭──────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-  &kp GRAVE   &kp Q        &kp W       &E_BACKSLASH   &R_RBRC         &kp T        &kp ESC                     &kp PAGE_UP     &go_page_up      &kp U          &go_up      &kp O     &layer_tap FN P  &kp DELETE
+  &kp GRAVE   &kp Q        &kp W       &E_BACKSLASH   &R_RBRC         &kp T        XXX                     &kp PAGE_UP     &go_page_up      &kp U          &go_up      &kp O     &layer_tap FN P  &kp DELETE
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┬───────────┤              ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &kp LSHIFT  &kp A         &kp S          &kp D      &F_RPAR     &G_SEMICOLON     &kp ESC                     &kp ENTER   &go_page_down   &go_left      &go_down     &go_right   &kp NUMBER_2   &N3_COLON
+  &kp LSHIFT  &kp A         &kp S          &kp D      &F_RPAR     &G_SEMICOLON     XXX                     &kp DELETE    &go_page_down   &go_left      &go_down     &go_right   &kp NUMBER_2   &N3_COLON
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼───────────┤               ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &mt LCTRL TAB &kp Z        &kp X         &kp C         &V_RBKT        &kp B    &kp ESC                     &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH    &mt RCTRL SEMICOLON
+  &mt LCTRL TAB &kp Z        &kp X         &kp C         &V_RBKT        &kp B    &kp ESC                     &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH    &mt RGUI SEMICOLON
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼───────────┼───────────┤             ├────────────┬───────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                        &mt LALT TAB  &kp LGUI       &kp SPC                                 &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap RGUI ESC
+                                        &kp LALT      &kp LGUI       &kp SPC                                 &kp ENTER   &layer_hold NAV BACKSPACE  &kp RALT
 //                                     ╰────────────┼──────────────┴─────────────╯                         ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
