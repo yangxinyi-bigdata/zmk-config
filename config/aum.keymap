@@ -243,16 +243,7 @@
                 ;
         };
 
-        go_iPhone: go_iPhone {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&bt BT_SEL 1>
-                , <&to 0>
-                ;
-        };
-
-        go_mac: go_mac {
+        go_macbook: go_macbook {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -261,12 +252,21 @@
                 ;
         };
 
-        go_vision: go_vision {
+        go_macpro: go_macpro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&bt BT_SEL 1>
+                , <&to 0>
+                ;
+        };
+
+        go_win: go_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 2>
-                , <&to 0>
+                , <&to 1>
                 ;
         };
 
@@ -275,16 +275,16 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 3>
-                , <&to 0>
+                , <&to 2>
                 ;
         };
 
-       go_win: go_win {
+       go_vision: go_vision {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 4>
-                , <&to 4>
+                , <&to 2>
                 ;
         };
         
@@ -547,7 +547,7 @@ SYS_layer {
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼──────────┬────────────┤                ├────────────┬────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &bootloader &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   ___                       ___          &kp T          ___           ___           ___         ___       &bootloader
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────┤                ├───────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &sys_reset  &go_mac      &go_win       &go_vision     &go_ipad      &go_iPhone     ___                        ___        &sys_reset      ___           ___           ___           ___           ___
+  &sys_reset  &go_macbook   &go_macpro       &go_win     &go_ipad      &go_vision     ___                        ___        &sys_reset      ___           ___           ___           ___           ___
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┼─────────┤                ├───────────┬─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                             &to 1       &to 2        &to 0                                                    ___          ___             ___
 //                                      ╰─────────────┴────────────┴─────────────╯                                      ╰─────────────┴──────────────┴─────────────╯
