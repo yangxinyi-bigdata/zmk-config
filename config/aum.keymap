@@ -61,7 +61,8 @@
             timeout-ms = <50>;
             key-positions = <0 1 2>;  // 左上角三个键的组合
             bindings = <&mo SYS>;       // 
-        };  
+            layers = <DEF WIN IOS NAV FN>; // 在这些层中启用这个组合键
+        };   
     };
 };
 
