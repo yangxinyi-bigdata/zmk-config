@@ -36,7 +36,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <1 2>;
+            if-layers = <3 4>;
             then-layer = <5>;
         };
     };
@@ -55,6 +55,13 @@
             timeout-ms = <50>;
             key-positions = <26 27 28>;
             bindings = <&kp LG(COMMA)>;
+        };
+
+        combo_sys_layer {
+            timeout-ms = <50>;
+            key-positions = <0 1 2>;  // 左上角三个键的组合
+            bindings = <&to 5>;       // 使用数字5，因为 SYS = 5
+            layers = <0 1 2 3 4>;     // DEF=0, WIN=1, IOS=2, NAV=3, FN=4
         };
     };
 };
