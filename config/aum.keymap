@@ -151,42 +151,42 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp I>, <&kp UP_ARROW>;
-            mods = <(MOD_LCTRL)>;
+            mods = <(MOD_LCTL)>;
         };
 
         win_down: win_down {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp K>, <&kp DOWN_ARROW>;
-            mods = <(MOD_LCTRL)>;
+            mods = <(MOD_LCTL)>;
         };
 
         win_right: win_right {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp L>, <&kp RIGHT_ARROW>;
-            mods = <(MOD_LCTRL)>;
+            mods = <(MOD_LCTL)>;
         };
 
         win_left: win_left {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp J>, <&kp LEFT_ARROW>;
-            mods = <(MOD_LCTRL)>;
+            mods = <(MOD_LCTL)>;
         };
 
         win_page_up: win_page_up {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp Y>, <&kp PAGE_UP>;
-            mods = <(MOD_LCTRL)>;
+            mods = <(MOD_LCTL)>;
         };
 
         win_page_down: win_page_down {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp H>, <&kp PAGE_DOWN>;
-            mods = <(MOD_LCTRL)>;
+            mods = <(MOD_LCTL)>;
         };
     };
 };
@@ -470,7 +470,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┬───────────┤              ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &kp LSHIFT  &kp A         &kp S          &kp D      &F_RPAR     &G_SEMICOLON     XXX                     &kp DELETE    &go_page_down   &go_left      &go_down     &go_right   &kp NUMBER_2   &N3_COLON
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼───────────┤               ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &mt LCTRL TAB &kp Z        &kp X         &kp C         &V_RBKT        &kp B    &kp ESC                     &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH    &mk_tap RGUI ESC
+  &mt LCTL TAB &kp Z        &kp X         &kp C         &V_RBKT        &kp B    &kp ESC                     &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH    &mk_tap RGUI ESC
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼───────────┼───────────┤             ├────────────┬───────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                         &kp LALT      &kp LGUI       &kp SPC                                 &kp ENTER   &layer_hold NAV BACKSPACE  &kp RALT
 //                                     ╰────────────┼──────────────┴─────────────╯                         ╰─────────────┴─────────────┼─────────────╯
@@ -531,7 +531,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼────────────┼─────────┤                   ├─────────────┬───────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &mt LALT TAB   ___             ___           ___          ___         ___        ___                             ___         ___          ___           ___           ___         ___           &mk_tap RCTRL ESC
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼────────────┼─────────┤                   ├─────────────┬───────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                          &kp LWIN     &kp LCTRL        ___                                                     ___           ___          &kp LWIN 
+                                          &kp LWIN     &kp LCTL        ___                                                     ___           ___          &kp LWIN 
 //                                     ╰─────────────┴─────────────┴─────────────╯                                          ╰─────────────┴───────────┴─────────────╯                       
                         >;
 		};
