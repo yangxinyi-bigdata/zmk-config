@@ -72,14 +72,6 @@ CONFIG_ZMK_LOG_LEVEL_DBG=y  // 调试级别
             bindings = <&kp>, <&kp>;
         };
 
-    mk_tap_hold: mk_tap_hold {
-        compatible = "zmk,behavior-hold-tap";
-        #binding-cells = <2>;
-        flavor = "hold-preferred";  // 改为hold-preferred
-        tapping-term-ms = <200>;
-        bindings = <&kp>, <&kp>;
-    };
-
     mt_hold: mt_hold {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
