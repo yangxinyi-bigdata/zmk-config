@@ -1,3 +1,8 @@
+// 在文件顶部添加以下配置
+CONFIG_ZMK_USB_LOGGING=y
+// 在文件顶部添加以下配置，可以选择不同的日志级别
+CONFIG_ZMK_LOG_LEVEL_DBG=y  // 调试级别
+
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 140
 
 #include <behaviors/mouse_keys.dtsi>
@@ -45,23 +50,12 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_arc_last {
-            timeout-ms = <50>;
-            key-positions = <14 15 16>;
-            bindings = <&kp LG(M)>;
-        };
-
-        combo_arc_next {
-            timeout-ms = <50>;
-            key-positions = <26 27 28>;
-            bindings = <&kp LG(COMMA)>;
-        };
+        
 
         combo_sys_layer {
             timeout-ms = <50>;
             key-positions = <0 1 2>;  // 左上角三个键的组合
-            bindings = <&mo SYS>;       // 
-            layers = <DEF WIN IOS NAV FN>; // 在这些层中启用这个组合键
+            bindings = <&kp B>;       // 
         };   
     };
 };
@@ -70,10 +64,26 @@
 / {
     behaviors {
 
-        mk_tap: mk_tap {
+    mk_tap: mk_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+
+    mk_tap_hold: mk_tap_hold {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "hold-preferred";  // 改为hold-preferred
+        tapping-term-ms = <200>;
+        bindings = <&kp>, <&kp>;
+    };
+
+    mt_hold: mt_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
         };
@@ -103,13 +113,7 @@
             bindings = <&mo>, <&kp>;
         };
 
-        mt_hold: mt_hold {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
-        };
+        
 
         go_up: go_up {
             compatible = "zmk,behavior-mod-morph";
@@ -477,9 +481,9 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┬───────────┤              ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &kp LSHIFT  &kp A         &kp S          &kp D      &F_RPAR     &G_SEMICOLON     XXX                     &kp DELETE    &go_page_down   &go_left      &go_down     &go_right   &kp NUMBER_2   &N3_COLON
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼───────────┤               ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &mt LCTL TAB &kp Z        &kp X         &kp C         &V_RBKT        &kp B    &kp ESC                     &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH    &mk_tap RGUI ESC
+  &mt LCTL TAB &kp Z        &kp X         &kp C         &V_RBKT        &kp B    &kp ESC                     &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH    &kp RALT
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼───────────┼───────────┤             ├────────────┬───────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                        &kp LALT      &kp LGUI       &kp SPC                                 &kp ENTER   &layer_hold NAV BACKSPACE  &kp RALT
+                                        &kp LALT      &kp LGUI       &kp SPC                                 &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap_hold RGUI ESC
 //                                     ╰────────────┼──────────────┴─────────────╯                         ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
@@ -493,9 +497,9 @@ WIN_layer {
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬───────────┤                ├─────────────┬───────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     ___        ___           ___           ___           ___         ___            ___                             ___      &win_page_down   &win_left     &win_down   &win_right       ___           ___
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼────────────┼─────────┤                   ├─────────────┬───────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &mt LALT TAB   ___             ___           ___          ___         ___        ___                             ___         ___          ___           ___           ___         ___           &mk_tap RCTRL ESC
+  &mt LALT TAB   ___             ___           ___          ___         ___        ___                             ___         ___          ___           ___           ___         ___           &kp LWIN
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼────────────┼─────────┤                   ├─────────────┬───────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                          &kp LWIN     &kp LCTL        ___                                                     ___           ___          &kp LWIN 
+                                          &kp LWIN     &kp LCTL        ___                                                     ___           ___          &mk_tap_hold RCTRL ESC 
 //                                     ╰─────────────┴─────────────┴─────────────╯                                          ╰─────────────┴───────────┴─────────────╯                       
                         >;
 		};
