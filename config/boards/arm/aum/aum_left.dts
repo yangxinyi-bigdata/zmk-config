@@ -94,7 +94,7 @@ nice_view_spi: &spi2 {
 		wakeup-source;
 		extra-gpios= <&gpio0  3 (GPIO_ACTIVE_HIGH)>; //4
 
-	}
+	};
 
 	wakeup_sources: wakeup_sources {
         compatible = "zmk,soft-off-wakeup-sources";
