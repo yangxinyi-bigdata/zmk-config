@@ -88,17 +88,9 @@ nice_view_spi: &spi2 {
 };
 / {
 
-	kscan_trigger: kscan_trigger{
-		compatible = "zmk,gpio-key-wakeup-trigger";
-		trigger=<&kscan0>;
-		wakeup-source;
-		extra-gpios= <&gpio0  3 (GPIO_ACTIVE_HIGH)>; //4
-
-	};
-
 	wakeup_sources: wakeup_sources {
         compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&kscan_trigger>;
+        wakeup-sources = <&kscan0>;
     };
 
 	chosen {
