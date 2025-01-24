@@ -92,7 +92,8 @@ nice_view_spi: &spi2 {
 		trigger=<&wakeup_sources>:
 		wakeup-source;
 		extra-gpios= <&gpio0  3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-	}
+	};
+	
 	wakeup_sources: wakeup_sources {
         compatible = "zmk,soft-off-wakeup-sources";
         wakeup-sources = <&kscan0>;
