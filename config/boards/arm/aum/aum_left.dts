@@ -105,7 +105,7 @@ nice_view_spi: &spi2 {
 	};
 	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-direct";
-		wakeup-source;
+		// wakeup-source; 删除 wakeup-source 属性，这样按键矩阵就不会成为唤醒源
 		input-gpios
 			= <&gpio1  1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //19
 			, <&gpio1	 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //18
