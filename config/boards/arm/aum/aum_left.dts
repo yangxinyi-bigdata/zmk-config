@@ -98,10 +98,30 @@ nice_view_spi: &spi2 {
 		compatible = "zmk,kscan-gpio-direct";
 		wakeup-source;
 		input-gpios
-			= <&gpio0  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //5
+			= <&gpio1  1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //19
+			, <&gpio1	 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //18
+			, <&gpio1	 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //13
+			, <&gpio1  10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //12
+			, <&gpio0  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //5
 			, <&gpio0  3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //4
 			, <&gpio0  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //ex1
-			,<&gpio0 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //1
+			, <&gpio1	 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //20
+			, <&gpio1  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //17
+			, <&gpio0  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //14
+			, <&gpio1  13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //11
+			, <&gpio0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //6
+			, <&gpio0 28 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //3
+			, <&gpio0 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //ex2
+			, <&gpio1 5  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //21
+			, <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //16
+			, <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //15
+			, <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //10
+			, <&gpio0 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //7
+			, <&gpio0 30 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //2
+			, <&gpio0 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //ex3
+			, <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // 9
+			, <&gpio0 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // 8
+			 ,<&gpio0 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //1
 		;
 	};
 
