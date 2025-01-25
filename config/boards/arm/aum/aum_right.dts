@@ -88,26 +88,14 @@ nice_view_spi: &spi2 {
   	kscan = <&kscan0>;
 };
 / {
-	gpio_wakeup: gpio_wakeup{
-		trigger=<&wakeup_sources>;
-		wakeup-source;
-		extra-gpios= <&gpio0  3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-	};
-
-	wakeup_sources: wakeup_sources {
-        compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&kscan0>;
-    };
-
 	chosen {
 		zmk,battery = &builtin_battery;
 		zmk,physical-layout = &matrix_physical_layout;
-		zmk,soft-off-wakeup-sources = <&gpio_wakeup>;
 	};
 	kscan0: kscan {
 		
 		compatible = "zmk,kscan-gpio-direct";
-		// wakeup-source; 删除 wakeup-source 属性，这样按键矩阵就不会成为唤醒源
+		wakeup-source; 
     input-gpios 
     = <&gpio0 28 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  //ex1
     , <&gpio0 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> //4

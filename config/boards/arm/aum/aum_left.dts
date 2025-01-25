@@ -87,21 +87,9 @@ nice_view_spi: &spi2 {
   	kscan = <&kscan0>;
 };
 / {
-	gpio_wakeup: gpio_wakeup{
-		trigger=<&wakeup_sources>;
-		wakeup-source;
-		extra-gpios= <&gpio0  3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-	};
-
-	wakeup_sources: wakeup_sources {
-        compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&kscan0>;
-    };
-
 	chosen {
 		zmk,battery = &builtin_battery;
 		zmk,physical-layout = &matrix_physical_layout;
-		zmk,soft-off-wakeup-sources = <&gpio_wakeup>;
 	};
 	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-direct";
