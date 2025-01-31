@@ -506,6 +506,7 @@
                                         &kp LALT      &LGUI_tab       &kp SPC                                 &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap RGUI ESC
 //                                     ╰────────────┼──────────────┴─────────────╯                         ╰─────────────┴─────────────┼─────────────╯
                         >;
+                label = "def";
                 };
 
 
