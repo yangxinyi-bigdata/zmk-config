@@ -17,9 +17,10 @@
 #define WIN 1
 #define IOS 2
 #define NAV 3
-#define FN 4
-#define SYS 5
-#define LOCK 6  // 添加LOCK层
+#define LOCK 4  // 添加LOCK层
+#define FN 5
+#define SYS 6
+
 
 // 设置图层切换风格, 默认是轻触优先, 我这里改成按住优先就可以
 &lt {
@@ -268,7 +269,7 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 0>
-                , <&to 0>
+                , <&tog DEF>
                 ;
         };
 
@@ -277,7 +278,7 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 1>
-                , <&to 0>
+                , <&tog DEF>
                 ;
         };
 
@@ -286,7 +287,7 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 2>
-                , <&to 1>
+                , <&tog WIN>
                 ;
         };
 
@@ -295,7 +296,7 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 3>
-                , <&to 2>
+                , <&tog IOS>
                 ;
         };
 
@@ -304,7 +305,7 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 4>
-                , <&to 2>
+                , <&tog IOS>
                 ;
         };
 
@@ -313,7 +314,7 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 4>
-                , <&to 6>
+                , <&&tog LOCK>
                 ;
         };
         
@@ -421,20 +422,6 @@
             #binding-cells = <0>;
             bindings = <&none>, <&tog NAV>;
             mods = <(MOD_LALT)>;
-        };
-
-        dancetonav: dancetonav {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp RCTRL>, <&tog NAV>;
-        };
-
-        dancetonav_win: dancetonav_win {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp RALT>, <&tog NAV>;
         };
 
         dance_tilde: dance_tilde {
@@ -570,6 +557,21 @@ IOS_layer {
                 label = "nav";
                 };
 
+                LOCK_layer {
+                        bindings = <
+//╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬────────────┬──────────╮                ╭───────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
+    &none      &none         &none         &none         &none         &none         &none                      &none        &none         &none         &none         &none         &mo FN       &none
+//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼──────────┬────────────┤                ├────────────┬────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+    &none       &none         &none         &none         &none         &none         &none                      &none        &none         &none        &none         &none         &none        &none
+//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────┤                ├───────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+    &none      &none         &none         &none         &none         &none         &none                      &none        &none         &none         &none         &none         &none        &none
+//├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┼─────────┤                ├───────────┬─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
+                                            &none         &none         &none                                               &none         &none         &none
+//                                      ╰─────────────┴────────────┴─────────────╯                                      ╰─────────────┴──────────────┴─────────────╯
+                        >;
+                label = "lock";
+                };
+
 FN_layer {
 
                         bindings = <
@@ -603,19 +605,6 @@ SYS_layer {
                     label = "sys";
 		};
 
-                LOCK_layer {
-                        bindings = <
-//╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬────────────┬──────────╮                ╭───────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    &none      &none         &none         &none         &none         &none         &none                      &none        &none         &none         &none         &none         &mo FN       &none
-//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼──────────┬────────────┤                ├────────────┬────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &none       &none         &none         &none         &none         &none         &none                      &none        &none         &none        &none         &none         &none        &none
-//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────┤                ├───────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &none      &none         &none         &none         &none         &none         &none                      &none        &none         &none         &none         &none         &none        &none
-//├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┼─────────┤                ├───────────┬─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                            &none         &none         &none                                               &none         &none         &none
-//                                      ╰─────────────┴────────────┴─────────────╯                                      ╰─────────────┴──────────────┴─────────────╯
-                        >;
-                label = "lock";
-                };
+
         };
 };
