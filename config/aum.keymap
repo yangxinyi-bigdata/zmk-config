@@ -63,7 +63,7 @@
             bindings = <&tog LOCK>;     // 切换LOCK层
         };
 
-        combo_lock_layer {
+        combo_lock_layer_new {
             timeout-ms = <50>;
             key-positions = <8 9 10>;  // 三个键的组合
             bindings = <&tog LOCK>;     // 切换LOCK层
