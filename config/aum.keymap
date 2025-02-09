@@ -48,24 +48,17 @@
 / {
     combos {
         compatible = "zmk,combos";
-        
-
-        combo_sys_layer {
-            timeout-ms = <50>;
-            key-positions = <0 1 2>;  // 左上角三个键的组合
-            bindings = <&kp B>;       // 
-        };   
 
         // 添加锁定层的组合键
-        combo_lock_layer {
-            timeout-ms = <50>;
-            key-positions = <1 2 3>;  // 右上角三个键的组合
-            bindings = <&tog LOCK>;     // 切换LOCK层
-        };
+        // combo_lock_layer {
+        //     timeout-ms = <50>;
+        //     key-positions = <1 2 3>;  // 右上角三个键的组合
+        //     bindings = <&tog LOCK>;     // 切换LOCK层
+        // };
 
         combo_lock_layer_new {
             timeout-ms = <50>;
-            key-positions = <8 9 10>;  // 三个键的组合
+            key-positions = <16 17 18>;  // 三个键的组合, 第一排开始, 左右都算在内
             bindings = <&tog LOCK>;     // 切换LOCK层
         };
     };
