@@ -416,6 +416,13 @@
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
+        BUTTON_TEST: BUTTON_TEST {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_2>, <&kp NUMBER_3>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+
         tonav: tonav {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -501,7 +508,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼───────────┤               ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &mt LCTL TAB &kp Z        &kp X         &kp C         &V_RBKT        &kp B    &kp ESC                     &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH   &kp RALT
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼───────────┼───────────┤             ├────────────┬───────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                        &kp LALT     &lgui_hold LGUI LALT  &kp SPC                           &kp ENTER   &layer_hold NAV BACKSPACE   &mt_hold RGUI ESC
+                                        &kp LALT     &lgui_hold LGUI LALT  &kp SPC                           &kp ENTER   &kp RGUI     &BUTTON_TEST
 //                                     ╰────────────┼──────────────┴─────────────╯                         ╰─────────────┴─────────────┼─────────────╯
                         >;
                 label = "def";
