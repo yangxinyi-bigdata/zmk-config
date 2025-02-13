@@ -416,17 +416,10 @@
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
-        BUTTON_TEST: BUTTON_TEST {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp NUMBER_2>, <&kp NUMBER_3>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
-        };
-
         tonav: tonav {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&none>, <&tog NAV>;
+            bindings = <XXX>, <&tog NAV>;
             mods = <(MOD_LALT)>;
         };
 
@@ -434,7 +427,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <&kp TILDE>;
+            bindings = <XXX>, <&kp TILDE>;
         };
     };
 };
@@ -506,9 +499,9 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┬───────────┤              ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &kp LSHIFT  &kp A         &kp S          &kp D      &F_RPAR     &G_SEMICOLON     XXX                     &kp DELETE    &go_page_down   &go_left      &go_down     &go_right   &kp NUMBER_2   &N3_COLON
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼───────────┤               ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &mt LCTL TAB &kp Z        &kp X         &kp C         &V_RBKT        &kp B    &kp ESC                     &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH   &kp RALT
+  &mt LCTL TAB &kp Z        &kp X         &kp C         &V_RBKT        &kp B    &kp ESC                     &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH   &mt_hold RGUI ESC
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼───────────┼───────────┤             ├────────────┬───────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                        &kp LALT     &lgui_hold LGUI LALT  &kp SPC                           &kp ENTER   &kp RGUI     &BUTTON_TEST
+                                        &kp LALT     &lgui_hold LGUI LALT  &kp SPC                           &kp ENTER   &layer_hold NAV BACKSPACE   &kp RALT
 //                                     ╰────────────┼──────────────┴─────────────╯                         ╰─────────────┴─────────────┼─────────────╯
                         >;
                 label = "def";
@@ -582,13 +575,13 @@ IOS_layer {
                 LOCK_layer {
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬────────────┬──────────╮                ╭───────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    &none      &none         &none         &none         &none         &none         &none                      &none        &none         &none         &none         &none         &none       &none
+    XXX          XXX         XXX            XXX            XXX         XXX         XXX                            XXX        XXX         XXX             XXX           XXX           XXX          XXX
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼──────────┬────────────┤                ├────────────┬────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &none       &none         &none         &none         &none         &none         &none                      &none        &none         &none        &none         &none         &none        &none
+    XXX          XXX         XXX             XXX          XXX           XXX         XXX                        XXX            XXX         XXX             XXX         XXX              XXX        XXX
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────┤                ├───────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    &none      &none         &none         &none         &none         &none         &none                      &none        &none         &none         &none         &none         &none        &none
+    XXX         XXX           XXX           XXX           XXX           XXX         XXX                         XXX          XXX            XXX         XXX           XXX           XXX          XXX
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┼─────────┤                ├───────────┬─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                            &none         &none         &none                                               &none         &none         &none
+                                            XXX          XXX            XXX                                                 XXX            XXX            XXX
 //                                      ╰─────────────┴────────────┴─────────────╯                                      ╰─────────────┴──────────────┴─────────────╯
                         >;
                 label = "lock";
