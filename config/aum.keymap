@@ -391,7 +391,7 @@
         T_RBRC: T_RBRC {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp R>, <&kp RBRC>;
+            bindings = <&kp T>, <&kp RBRC>;
             mods = <(MOD_RGUI)>;
         };
 
@@ -405,7 +405,7 @@
         G_RPAR: G_RPAR {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp F>, <&kp RPAR>;
+            bindings = <&kp G>, <&kp RPAR>;
             mods = <(MOD_RGUI)>;
         };
 
@@ -419,7 +419,7 @@
         B_RBKT: B_RBKT {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp V>, <&kp RBKT>;
+            bindings = <&kp B>, <&kp RBKT>;
             mods = <(MOD_RGUI)>;
         };
 
