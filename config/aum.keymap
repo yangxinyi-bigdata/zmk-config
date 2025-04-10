@@ -380,34 +380,50 @@
             mods = <(MOD_RGUI)>;
         };
 
-        R_RBRC: R_RBRC {
+
+        R_LBRC: R_LBRC {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp R>, <&kp LBRC>;
+            mods = <(MOD_RGUI)>;
+        };
+
+        T_RBRC: T_RBRC {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp R>, <&kp RBRC>;
             mods = <(MOD_RGUI)>;
         };
 
-        V_RBKT: V_RBKT {
+        F_LPAR: F_LPAR {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp F>, <&kp LPAR>;
+            mods = <(MOD_RGUI)>;
+        };
+
+        G_RPAR: G_RPAR {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp F>, <&kp RPAR>;
+            mods = <(MOD_RGUI)>;
+        };
+
+        V_LBKT: V_LBKT {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&kp LBKT>;
+            mods = <(MOD_RGUI)>;
+        };
+
+        B_RBKT: B_RBKT {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp V>, <&kp RBKT>;
             mods = <(MOD_RGUI)>;
         };
 
-
-        E_BACKSLASH: E_BACKSLASH {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp E>, <&kp BACKSLASH>;
-            mods = <(MOD_RGUI)>;
-        };
-
-        F_RPAR: F_RPAR {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp F>, <&kp RPAR>;
-            mods = <(MOD_RGUI)>;
-        };
+        
 
         N3_COLON: N3_COLON {
             compatible = "zmk,behavior-mod-morph";
@@ -495,11 +511,11 @@
                 DEF_layer {
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬───────────╮               ╭──────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-  &kp GRAVE   &kp Q        &kp W            &kp E       &R_RBRC       &kp T        XXX                     &kp PAGE_UP     &go_page_up      &kp U          &go_up      &kp O     &layer_tap FN P  &layer_hold FN DELETE
+  &kp GRAVE   &kp Q        &kp W            &kp E       &R_LBRC       &T_RBRC        XXX                     &kp PAGE_UP     &go_page_up      &kp U          &go_up      &kp O     &layer_tap FN P  &layer_hold FN DELETE
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┬───────────┤              ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &kp LSHIFT  &kp A         &kp S          &kp D      &F_RPAR     &G_SEMICOLON     XXX                     &kp DELETE    &go_page_down   &go_left      &go_down     &go_right   &kp NUMBER_2   &N3_COLON
+  &kp LSHIFT  &kp A         &kp S          &kp D        &F_LPAR        &G_RPAR     XXX                     &kp DELETE    &go_page_down   &go_left      &go_down     &go_right   &kp NUMBER_2   &N3_COLON
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼───────────┤               ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &mt LCTL TAB &kp Z        &kp X         &kp C         &V_RBKT        &kp B    &kp ESC                     &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH   &mt_hold RGUI TAB
+  &mt LCTL TAB &kp Z        &kp X         &kp C         &V_LBKT        &B_RBKT    &kp ESC                     &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH   &mt_hold RGUI TAB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼───────────┼───────────┤             ├────────────┬───────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                         &kp LALT     &lgui_hold LGUI LALT  &kp SPC                           &kp ENTER   &layer_hold NAV BACKSPACE  &layer_hold FN ESC
 //                                     ╰────────────┼──────────────┴─────────────╯                         ╰─────────────┴─────────────┼─────────────╯
@@ -544,11 +560,11 @@ IOS_layer {
                 NAV_layer {
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬────────────────────┬────────────────┬───────────────┬───────────╮                  ╭───────────┬───────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-  &kp TILDE  &kp EXCLAMATION &kp AT_SIGN     &kp PIPE          &kp LBRC          &kp RBRC       ___                           ___       &kp PLUS   &kp NUMBER_7  &command_8   &kp NUMBER_9  &layer_tap FN ASTERISK  &kp SLASH
+  &kp TILDE  &kp EXCLAMATION &kp AT_SIGN     &kp PIPE        &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE   ___                           ___       &kp PLUS   &kp NUMBER_7  &command_8   &kp NUMBER_9  &layer_tap FN ASTERISK  &kp SLASH
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼────────────────┼───────────────┬───────────┤                  ├────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    ___      &kp HASH     &kp DOLLAR       &kp UNDERSCORE       &kp LPAR       &kp RPAR         ___                             ___          &kp MINUS    &command_4   &command_5     &command_6        ___         ___
+    ___      &kp HASH     &kp DOLLAR       &kp UNDERSCORE       &kp COLON   &kp SEMICOLON         ___                             ___          &kp MINUS    &command_4   &command_5     &command_6        ___         ___
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼────────────────┼───────────────┼───────────┤                  ├───────────┬───────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
- &kp LS(TAB) &kp CARET    &kp AMPS       &kp PERCENT           &kp LBKT         &kp RBKT         ___                           ___          &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp DOT        ___
+ &kp LS(TAB) &kp CARET    &kp AMPS       &kp PERCENT            &kp ASTERISK    &kp SLASH         ___                           ___          &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp DOT        ___
 //├──────┤ ╰─────────────┼─────────────┴────────────────────┼────────────────┼───────────────┼───────────┤                  ├────────────┬─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                                          ___           ___          ___                                                       ___           ___        &kp NUMBER_0
 //                                                 ╰────────────┼──────────────┴─────────────╯                                             ╰────────────┴─────────────┼─────────────╯
@@ -560,11 +576,11 @@ IOS_layer {
 
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬────────────┬────────────╮               ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    ___     &kp F12       &kp F7     &kp BACKSLASH &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE   ___                       ___        &kp HOME      &kp K_POWER     ___             ___         ___          ___
+    ___     &kp F12       &kp EQUAL     &kp BACKSLASH    &kp LBRC      &kp RBRC        ___                       ___        &kp HOME      &kp K_POWER     ___             ___         ___          ___
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼────────────┬────────────┤               ├─────────────┬───────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    ___     &kp F11       &kp F4        &kp F5         &kp COLON   &kp SEMICOLON     ___                        ___         &kp END      &kp C_POWER   &kp C_PREV  &kp C_PLAY_PAUSE &kp C_NEXT    ___
+    ___     &kp F11       &kp F2        &kp MINUS       &kp LPAR      &kp RPAR        ___                        ___         &kp END      &kp C_POWER   &kp C_PREV  &kp C_PLAY_PAUSE &kp C_NEXT    ___
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼────────────┼────────────┤               ├─────────────┬───────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    ___     &kp F10       &kp F1        &kp F2         &kp ASTERISK    &kp SLASH   ___                       ___       &kp C_BRI_UP   &kp C_BRI_DN  &kp C_MUTE  &kp C_VOL_UP  &kp C_VOLUME_DOWN  ___
+    ___     &kp F10       &kp F1        &kp EQUAL       &kp LBKT       &kp RBKT        ___                       ___       &kp C_BRI_UP   &kp C_BRI_DN  &kp C_MUTE  &kp C_VOL_UP  &kp C_VOLUME_DOWN  ___
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼────────────┼────────────┤               ├─────────────┬───────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                             ___          ___          ___                                                    &tog LOCK       &to DEF         ___
 //                                     ╰─────────────┴─────────────┴────────────╯                                         ╰─────────────┴─────────────┴─────────────╯
