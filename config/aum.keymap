@@ -60,7 +60,7 @@
             timeout-ms = <50>;
             key-positions = <16 17 18>;  // 三个键的组合, 第一排开始, 左右都算在内
             bindings = <&tog LOCK>;     // 切换LOCK层
-            layers = <DEF WIN IOS LOCK>;  // 在DEF(0)和WIN(1)层都生效
+            require-prior-idle-ms = <1000>;  // 添加这个配置，要求在按combo之前有200ms的空闲时间
         };
     };
 };
