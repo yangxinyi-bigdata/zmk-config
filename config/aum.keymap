@@ -376,100 +376,6 @@
                 mods = <(MOD_LSFT)>;
         };
 
-        G_SEMICOLON: G_SEMICOLON {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp G>, <&kp SEMICOLON>;
-            mods = <(MOD_RGUI)>;
-        };
-
-
-        R_LBRC: R_LBRC {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp R>, <&kp LBRC>;
-            mods = <(MOD_RGUI)>;
-        };
-
-        T_RBRC: T_RBRC {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp T>, <&kp RBRC>;
-            mods = <(MOD_RGUI)>;
-        };
-
-        F_LPAR: F_LPAR {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp F>, <&kp LPAR>;
-            mods = <(MOD_RGUI)>;
-        };
-
-        G_RPAR: G_RPAR {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp G>, <&kp RPAR>;
-            mods = <(MOD_RGUI)>;
-        };
-
-        V_LBKT: V_LBKT {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp V>, <&kp LBKT>;
-            mods = <(MOD_RGUI)>;
-        };
-
-        B_RBKT: B_RBKT {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp B>, <&kp RBKT>;
-            mods = <(MOD_RGUI)>;
-        };
-
-        // 下面是Wins下面的括号快捷键
-
-        R_LBRC_WIN: R_LBRC_WIN {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp R>, <&kp LBRC>;
-            mods = <(MOD_RCTL)>;
-        };
-
-        T_RBRC_WIN: T_RBRC_WIN {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp T>, <&kp RBRC>;
-            mods = <(MOD_RCTL)>;
-        };
-
-        F_LPAR_WIN: F_LPAR_WIN {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp F>, <&kp LPAR>;
-            mods = <(MOD_RCTL)>;
-        };
-
-        G_RPAR_WIN: G_RPAR_WIN {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp G>, <&kp RPAR>;
-            mods = <(MOD_RCTL)>;
-        };
-
-        V_LBKT_WIN: V_LBKT_WIN {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp V>, <&kp LBKT>;
-            mods = <(MOD_RCTL)>;
-        };
-
-        B_RBKT_WIN: B_RBKT_WIN {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp B>, <&kp RBKT>;
-            mods = <(MOD_RCTL)>;
-        };
-
         LOCK_TOG: LOCK_TOG {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -570,11 +476,11 @@
                 DEF_layer {
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬───────────╮               ╭──────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-  &kp GRAVE   &kp Q        &kp W            &kp E       &kp LBRC      &kp RBRC        XXX                     &kp PAGE_UP     &go_page_up      &kp U       &go_up      &kp O     &layer_tap FN P  &kp DELETE
+  &kp GRAVE   &kp Q        &kp W          &kp E         &kp R          &kp T         XXX                     &kp PAGE_UP     &go_page_up      &kp U       &go_up      &kp O     &layer_tap FN P  &kp DELETE
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┬───────────┤              ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &kp RSHIFT  &kp A         &kp S          &kp D        &kp LPAR       &kp RPAR     XXX                     &tog NAV    &go_page_down   &go_left      &go_down     &go_right   &NUMBER_2_COLON   &NUMBER_3_SEMICOLON
+  &kp RSHIFT  &kp A         &kp S          &kp D        &kp F         &kp G        XXX                     &tog NAV    &go_page_down   &go_left      &go_down     &go_right   &NUMBER_2_COLON   &NUMBER_3_SEMICOLON
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼───────────┤               ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &mt LCTL TAB &kp Z        &kp X         &kp C         &kp LBKT       &kp RBKT    &LOCK_TOG                 &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH   &mt_hold RGUI TAB
+  &mt LCTL TAB &kp Z        &kp X         &kp C         &kp V        &kp B      &LOCK_TOG                 &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH   &mt_hold RGUI TAB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼───────────┼───────────┤             ├────────────┬───────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                         &kp LALT     &lgui_hold LGUI LALT  &kp SPC                           &kp ENTER   &layer_hold NAV BACKSPACE  &layer_hold FN ESC
 //                                     ╰────────────┼──────────────┴─────────────╯                         ╰─────────────┴─────────────┼─────────────╯
@@ -587,11 +493,11 @@ WIN_layer {
 
                         bindings = <
  //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬───────────╮               ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────┬────────╮
-    ___        ___          ___           ___           &R_LBRC_WIN    &T_RBRC_WIN    ___                           ___      &win_page_up       ___          &win_up          ___             ___         ___
+    ___        ___          ___             ___           ___           ___          ___                           ___      &win_page_up       ___          &win_up          ___             ___         ___
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬───────────┤                ├─────────────┬───────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-     ___      ___           ___           ___          &F_LPAR_WIN   &G_RPAR_WIN   ___                             ___      &win_page_down   &win_left     &win_down   &win_right       ___           ___
+     ___      ___           ___             ___           ___           ___         ___                             ___      &win_page_down   &win_left     &win_down   &win_right       ___           ___
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼────────────┼─────────┤                   ├─────────────┬───────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &mt LALT TAB   ___             ___           ___       &V_LBKT_WIN   &B_RBKT_WIN   ___                             ___         ___          ___           ___           ___         ___           &mk_tap RCTRL TAB
+  &mt LALT TAB   ___             ___         ___        ___             ___         ___                             ___         ___          ___           ___           ___         ___           &mk_tap RCTRL TAB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼────────────┼─────────┤                   ├─────────────┬───────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                           &kp LWIN     &lgui_hold LCTL LWIN   ___                                              ___           ___         ___ 
 //                                     ╰─────────────┴─────────────┴─────────────╯                                          ╰─────────────┴───────────┴─────────────╯                       
