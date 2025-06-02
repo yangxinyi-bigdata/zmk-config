@@ -553,7 +553,7 @@
             mods = <(MOD_LGUI)>;
         };
 
-        NUMBER_3_COLON: NUMBER_3_COLON {
+        NUMBER_3_SEMICOLON: NUMBER_3_SEMICOLON {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_3>, <&kp SEMICOLON>;
@@ -570,11 +570,11 @@
                 DEF_layer {
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬───────────┬───────────╮               ╭──────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-  &kp GRAVE   &kp Q        &kp W            &kp E       &R_LBRC       &T_RBRC        XXX                     &kp PAGE_UP     &go_page_up      &kp U          &go_up      &kp O     &layer_tap FN P  &kp DELETE
+  &kp GRAVE   &kp Q        &kp W            &kp E       &kp LBRC      &kp RBRC        XXX                     &kp PAGE_UP     &go_page_up      &kp U       &go_up      &kp O     &layer_tap FN P  &kp DELETE
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┬───────────┤              ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &kp RSHIFT  &kp A         &kp S          &kp D        &F_LPAR        &G_RPAR     XXX                     &tog NAV    &go_page_down   &go_left      &go_down     &go_right   &kp NUMBER_2_COLON   &kp NUMBER_3_COLON
+  &kp RSHIFT  &kp A         &kp S          &kp D        &kp LPAR       &kp RPAR     XXX                     &tog NAV    &go_page_down   &go_left      &go_down     &go_right   &NUMBER_2_COLON   &NUMBER_3_SEMICOLON
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼───────────┤               ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &mt LCTL TAB &kp Z        &kp X         &kp C         &V_LBKT        &B_RBKT    &LOCK_TOG                 &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH   &mt_hold RGUI TAB
+  &mt LCTL TAB &kp Z        &kp X         &kp C         &kp LBKT       &kp RBKT    &LOCK_TOG                 &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH   &mt_hold RGUI TAB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼───────────┼───────────┤             ├────────────┬───────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                         &kp LALT     &lgui_hold LGUI LALT  &kp SPC                           &kp ENTER   &layer_hold NAV BACKSPACE  &layer_hold FN ESC
 //                                     ╰────────────┼──────────────┴─────────────╯                         ╰─────────────┴─────────────┼─────────────╯
