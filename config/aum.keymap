@@ -128,56 +128,56 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp I>, <&kp UP_ARROW>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
         go_down: go_down {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp K>, <&kp DOWN_ARROW>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
         go_right: go_right {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp L>, <&kp RIGHT_ARROW>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
         go_left: go_left {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp J>, <&kp LEFT_ARROW>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
         go_page_up: go_page_up {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp Y>, <&kp PAGE_UP>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
         go_page_down: go_page_down {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp H>, <&kp PAGE_DOWN>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
         go_line_home: go_line_home {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp Y>, <&kp LG(LEFT_ARROW)>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
         go_line_end: go_line_end {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp U>, <&kp LG(RIGHT_ARROW)>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
         // win方向快捷键设置
@@ -185,56 +185,56 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp I>, <&kp UP_ARROW>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         win_down: win_down {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp K>, <&kp DOWN_ARROW>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         win_right: win_right {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp L>, <&kp RIGHT_ARROW>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         win_left: win_left {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp J>, <&kp LEFT_ARROW>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         win_page_up: win_page_up {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp Y>, <&kp PAGE_UP>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         win_page_down: win_page_down {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp H>, <&kp PAGE_DOWN>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         win_line_home: win_line_home {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp Y>, <&kp LG(LEFT_ARROW)>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         win_line_end: win_line_end {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp U>, <&kp LG(RIGHT_ARROW)>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
 };
@@ -246,28 +246,28 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_4>, <&kp LG(LEFT_ARROW)>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
         command_8: command_8 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_8>, <&kp LG(UP_ARROW)>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
         command_5: command_5 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_5>, <&kp LG(DOWN_ARROW)>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
         command_6: command_6 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_6>, <&kp LG(RIGHT_ARROW)>;
-            mods = <(MOD_LGUI)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
         
 
