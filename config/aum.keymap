@@ -496,7 +496,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼───────────┼───────────┤               ├─────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &mt LCTL TAB &kp Z        &kp X         &kp C         &kp V        &kp B      &LOCK_TOG                 &kp PAGE_DOWN    &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH   &mt_hold RGUI TAB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼───────────┼───────────┤             ├────────────┬───────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                        &kp LALT     &lgui_hold LGUI LALT  &kp SPC                           &kp ENTER   &layer_hold NAV BACKSPACE  &layer_hold FN ESC
+                                        &kp LALT     &lgui_hold LGUI LALT  &kp SPC                           &kp BACKSPACE   &layer_hold NAV ENTER  &layer_hold FN ESC
 //                                     ╰────────────┼──────────────┴─────────────╯                         ╰─────────────┴─────────────┼─────────────╯
                         >;
                 label = "def";
