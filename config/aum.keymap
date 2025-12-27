@@ -298,7 +298,7 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 0>
-                , <&tog DEF>
+                , <&to DEF>
                 ;
         };
 
@@ -307,7 +307,7 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 1>
-                , <&tog DEF>
+                , <&to DEF>
                 ;
         };
 
@@ -316,7 +316,7 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 2>
-                , <&tog WIN>
+                , <&to WIN>
                 ;
         };
 
@@ -325,7 +325,7 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 3>
-                , <&tog IOS>
+                , <&to IOS>
                 ;
         };
 
@@ -334,7 +334,7 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 4>
-                , <&tog IOS>
+                , <&to IOS>
                 ;
         };
 
