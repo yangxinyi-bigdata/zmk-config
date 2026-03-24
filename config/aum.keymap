@@ -249,11 +249,25 @@
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
-        command_8: command_8 {
+        command_8_base: command_8_base {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_8>, <&kp LG(UP_ARROW)>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+
+        command_8_shift: command_8_shift {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp ASTERISK>, <&pwd_macro>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+
+        command_8: command_8 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&command_8_base>, <&command_8_shift>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         command_5: command_5 {
@@ -270,11 +284,18 @@
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
         
+        command_7_shift: command_7_shift {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp AMPS>, <&email_macro>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+
         command_7: command_7 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_7>, <&email_macro>;
-            mods = <(MOD_LGUI|MOD_RGUI)>;
+            bindings = <&kp NUMBER_7>, <&command_7_shift>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
     };
@@ -283,6 +304,24 @@
 
 / {
     macros {
+
+        pwd_macro: pwd_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp RGUI>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp RCTRL>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp RALT>
+                , <&kp LS(Y) &kp Y &kp UNDERSCORE &kp N1 &kp N3 &kp N0 &kp N2 &kp N9 &kp N9 &kp N5 &kp N3 &kp N8 &kp N8 &kp N7>
+                ;
+        };
 
         email_macro: email_macro {
             compatible = "zmk,behavior-macro";
