@@ -270,7 +270,12 @@
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
         
-
+        command_7: command_7 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_7>, <&email_macro>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
 
     };
 };
@@ -278,6 +283,24 @@
 
 / {
     macros {
+
+        email_macro: email_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp RGUI>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp RCTRL>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp RALT>
+                , <&kp Y &kp A &kp N &kp G &kp Y &kp U &kp E &kp H &kp A &kp H &kp A &kp AT &kp Q &kp Q &kp DOT &kp C &kp O &kp M>
+                ;
+        };
 
         tab_page_two: tab_page_two {
             compatible = "zmk,behavior-macro";
@@ -539,7 +562,7 @@ IOS_layer {
                 NAV_layer {
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬────────────────────┬────────────────┬───────────────┬───────────╮                  ╭───────────┬───────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-  &kp TILDE  &kp EXCLAMATION &kp PIPE     &kp BACKSLASH         &kp LBRC        &kp RBRC         ___                            ___       &kp PLUS   &kp NUMBER_7  &command_8   &kp NUMBER_9    &layer_tap FN ASTERISK  ___
+  &kp TILDE  &kp EXCLAMATION &kp PIPE     &kp BACKSLASH         &kp LBRC        &kp RBRC         ___                            ___       &kp PLUS   &command_7  &command_8   &kp NUMBER_9    &layer_tap FN ASTERISK  ___
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼────────────────┼───────────────┬───────────┤                  ├────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     ___    &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp UNDERSCORE   &kp LBKT     &kp RBKT         ___                            ___         &kp MINUS    &command_4   &command_5     &command_6       &kp COLON     &kp SEMICOLON
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼────────────────┼───────────────┼───────────┤                  ├───────────┬───────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
