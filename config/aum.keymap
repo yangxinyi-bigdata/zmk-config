@@ -337,7 +337,7 @@
                 , <&macro_release &kp RCTRL>
                 , <&macro_release &kp LALT>
                 , <&macro_release &kp RALT>
-                , <&kp Y &kp A &kp N &kp G &kp Y &kp U &kp E &kp H &kp A &kp H &kp A &kp AT &kp Q &kp Q &kp DOT &kp C &kp O &kp M>
+                , <&macro_tap &kp Y &kp A &kp N &kp G &kp Y &kp U &kp E &kp H &kp A &kp H &kp A &kp AT &kp Q &kp Q &kp DOT &kp C &kp O &kp M>
                 ;
         };
 
