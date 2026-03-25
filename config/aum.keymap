@@ -259,7 +259,7 @@
         command_8_shift: command_8_shift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp ASTERISK>, <&pwd_macro>;
+            bindings = <&kp ASTERISK>, <&account_macro>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
@@ -277,11 +277,25 @@
             mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
-        command_6: command_6 {
+        command_6_base: command_6_base {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_6>, <&kp LG(RIGHT_ARROW)>;
             mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+
+        command_6_shift: command_6_shift {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp CARET>, <&qq_macro>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+
+        command_6: command_6 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&command_6_base>, <&command_6_shift>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         
         command_7_shift: command_7_shift {
@@ -298,6 +312,20 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        command_9_shift: command_9_shift {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&phone_macro>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+
+        command_9: command_9 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_9>, <&command_9_shift>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
     };
 };
 
@@ -305,7 +333,7 @@
 / {
     macros {
 
-        pwd_macro: pwd_macro {
+        account_macro: account_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <30>;
@@ -319,7 +347,7 @@
                 , <&macro_release &kp RCTRL>
                 , <&macro_release &kp LALT>
                 , <&macro_release &kp RALT>
-                , <&kp LS(Y) &kp Y &kp UNDERSCORE &kp N1 &kp N3 &kp N0 &kp N2 &kp N9 &kp N9 &kp N5 &kp N3 &kp N8 &kp N8 &kp N7>
+                , <&macro_tap &kp LS(Y) &kp Y &kp UNDERSCORE &kp N1 &kp N3 &kp N0 &kp N2 &kp N9 &kp N9 &kp N5 &kp N3 &kp N8 &kp N8 &kp N7>
                 ;
         };
 
@@ -338,6 +366,42 @@
                 , <&macro_release &kp LALT>
                 , <&macro_release &kp RALT>
                 , <&macro_tap &kp Y &kp A &kp N &kp G &kp Y &kp U &kp E &kp H &kp A &kp H &kp A &kp AT &kp Q &kp Q &kp DOT &kp C &kp O &kp M>
+                ;
+        };
+
+        phone_macro: phone_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp RGUI>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp RCTRL>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp RALT>
+                , <&macro_tap &kp N1 &kp N8 &kp N9 &kp N4 &kp N6 &kp N3 &kp N5 &kp N1 &kp N8 &kp N6 &kp N0>
+                ;
+        };
+
+        qq_macro: qq_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_release &kp LSHFT>
+                , <&macro_release &kp RSHFT>
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp RGUI>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp RCTRL>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp RALT>
+                , <&macro_tap &kp Y &kp Y &kp N3 &kp N5 &kp N3 &kp N4 &kp N3 &kp N6 &kp N5>
                 ;
         };
 
@@ -601,7 +665,7 @@ IOS_layer {
                 NAV_layer {
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬────────────────────┬────────────────┬───────────────┬───────────╮                  ╭───────────┬───────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-  &kp TILDE  &kp EXCLAMATION &kp PIPE     &kp BACKSLASH         &kp LBRC        &kp RBRC         ___                            ___       &kp PLUS   &email_macro  &command_8   &kp NUMBER_9    &layer_tap FN ASTERISK  ___
+  &kp TILDE  &kp EXCLAMATION &kp PIPE     &kp BACKSLASH         &kp LBRC        &kp RBRC         ___                            ___       &kp PLUS   &command_7    &command_8   &command_9     &layer_tap FN ASTERISK  ___
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼────────────────┼───────────────┬───────────┤                  ├────────────┬──────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     ___    &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp UNDERSCORE   &kp LBKT     &kp RBKT         ___                            ___         &kp MINUS    &command_4   &command_5     &command_6       &kp COLON     &kp SEMICOLON
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼────────────────┼───────────────┼───────────┤                  ├───────────┬───────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
