@@ -336,7 +336,7 @@
         account_macro: account_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
+            wait-ms = <10>;
             tap-ms = <30>;
             bindings
                 = <&macro_release &kp LSHFT>
@@ -354,7 +354,7 @@
         email_macro: email_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
+            wait-ms = <10>;
             tap-ms = <30>;
             bindings
                 = <&macro_release &kp LSHFT>
@@ -372,7 +372,7 @@
         phone_macro: phone_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
+            wait-ms = <10>;
             tap-ms = <30>;
             bindings
                 = <&macro_release &kp LSHFT>
@@ -390,7 +390,7 @@
         qq_macro: qq_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
+            wait-ms = <10>;
             tap-ms = <30>;
             bindings
                 = <&macro_release &kp LSHFT>
